@@ -34,9 +34,9 @@ function Navbar() {
           </div> 
         </div> 
 
-        <div className="absolute bottom-6  z-50 max-[1025px]:inline-block hidden max-lg:relative max-lg:top-16 max-lg:left-0"> 
-            <label htmlFor="menu-toggle" className="cursor-pointer"> 
-              <img src={menu} alt="menu" className="h-8 w-12 max-[1025px]:w-8 mt-[25px] relative right-8"/> 
+        <div className="absolute bottom-6 right-8 z-50 max-[1025px]:inline-block hidden mt-[25px] max-lg:relative max-lg:top-16 max-lg:left-0"> 
+            <label htmlFor="menu-toggle" className="cursor-pointers"> 
+              <img src={menu} alt="menu" className="h-8 w-12 max-[1025px]:w-8"/> 
             </label> 
         </div> 
       </div> 
@@ -44,14 +44,12 @@ function Navbar() {
       {/* Lower Navigation */} 
       <div className="relative"> 
         {/* Desktop Nav */} 
-        <ul className="lower-nav bg-white text-gray-500 font-bold h-12 w-4/5 m-auto flex justify-between items-center list-disc text-sm transition duration-250 max-[1025px]:hidden"> 
+        <ul className="lower-nav bg-white text-gray-500 font-bold h-12 w-2/3 m-auto flex justify-between items-center list-disc text-sm transition duration-250 max-[1025px]:hidden"> 
           <ListItem text="Home" /> 
-          <ListItem text="About" children={['Profile', 'Board of Trustees','Governance','History','Swikar Charitable Institutional Partners']} /> 
-          <ListItem text="Founders & Partners" /> 
-          <ListItem text="Sectors" children={['Education', 'Health', 'LivelyHoods', 'Urban Governance']} /> 
-          <ListItem text="Awards" /> 
+          <ListItem text="About" children={['Profile','Governance','History','Swikar Charitable Institutional Partners']} /> 
+          <ListItem text="Sectors" children={['Education', 'Health', 'LivelyHoods', 'Environment', 'Divyang Rights']} /> 
 
-          <ListItem text="Resources" children={['Annual Reports', 'Publications', 'Intern Reports']} /> 
+          <ListItem text="Resources" children={['Annual Reports', 'Intern Reports']} /> 
           <ListItem text="Get Involved" /> 
 
           <ListItem text="CSR" /> 
@@ -78,27 +76,24 @@ function Navbar() {
                 children={[ 
                   { label: 'Profile', path: '/profile' }, 
                   { label: 'History', path: '/history' }, 
-                  { label: 'Board of Trustees', path: '/board-of-trustees' }, 
                   { label: 'Governance', path: '/governance' }, 
                   { label: 'Swikar Charitable Institutional Partners', path: '/Swikar Charitable Institutional Partners' }, 
                 ]} 
               /> 
-              <MobileListItem text="Founders & Partners" /> 
               <MobileListItem 
                 text="Sectors" 
                 children={[ 
                   { label: 'Education', path: '/education' }, 
                   { label: 'Health', path: '/health' }, 
                   { label: 'LivelyHoods', path: '/livelyHoods' }, 
-                  { label: 'Urban Governance', path: '/urban-governance' }, 
+                  { label: 'Environment', path: '/environment' }, 
+                  { label: 'Divyang Rights', path: '/divyang-rights' },
                 ]} 
               /> 
-              <MobileListItem text="Awards" /> 
               <MobileListItem 
                 text="Resources" 
                 children={[
                   { label: 'AnnualReports', path: '/annual-reports' }, 
-                  { label: 'Publication', path: '/publications' }, 
                   { label: 'Intern Reports', path: '/intern-reports' }, 
                 ]} 
               /> 
